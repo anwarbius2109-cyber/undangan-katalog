@@ -1,3 +1,20 @@
 body {
   font-family: sans-serif;
 }
+.btn-filter {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-filter:hover {
+  background: black;
+  color: white;
+}
+
+.btn-filter.active {
+  background: black;
+  color: white;
+}
