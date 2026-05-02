@@ -1,17 +1,17 @@
 [
   {
     "nama": "Elegant Gold",
-    "gambar": "assets/images/tema1.jpg",
+    "gambar": "assets/images/Aesthetic Romance.jpg",
     "link": "https://contoh-undangan1.vercel.app"
   },
   {
     "nama": "Romantic Pink",
-    "gambar": "assets/images/tema2.jpg",
+    "gambar": "assets/images/Elegan White.webp",
     "link": "https://contoh-undangan2.vercel.app"
   },
   {
     "nama": "Minimal White",
-    "gambar": "assets/images/tema3.jpg",
+    "gambar": "assets/images/Elegan nature.webp",
     "link": "https://contoh-undangan3.vercel.app"
   }
 ]
