@@ -3,7 +3,7 @@ fetch("data/katalog.json")
   .then(data => {
 
     const katalog = document.getElementById("katalog");
-    const nomorWA = "6281234567890"; // ✅ TARUH DI SINI
+    const nomorWA = "6281261233730"; // ✅ TARUH DI SINI
 
     data.forEach(item => {
 
