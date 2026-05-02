@@ -20,29 +20,35 @@
 
     <!-- MENU DESKTOP -->
     <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="#">Home</a>
-      <a href="#katalog">Katalog</a>
+      <a href="#" class="hover:text-black text-gray-600">Home</a>
+      <a href="#katalog" class="hover:text-black text-gray-600">Katalog</a>
       <a href="https://wa.me/6281261233730" target="_blank"
-        class="bg-black text-white px-4 py-2 rounded-full">
+        class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
         Order
       </a>
     </nav>
 
-    <!-- 🔥 INI TEMPAT TOMBOLNYA -->
-    <button id="menuBtn" class="md:hidden text-2xl">
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-2xl font-bold">
       ☰
     </button>
 
   </div>
 
-  <!-- MENU MOBILE -->
-  <div id="mobileMenu" class="hidden flex-col gap-4 px-4 pb-4 md:hidden">
-    <a href="#">Home</a>
-    <a href="#katalog">Katalog</a>
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-3">
+
+    <a href="#" class="block text-gray-700">Home</a>
+
+    <a href="#katalog" class="block text-gray-700">
+      Katalog
+    </a>
+
     <a href="https://wa.me/6281261233730" target="_blank"
-      class="bg-black text-white px-4 py-2 rounded-full text-center">
+      class="block bg-black text-white px-4 py-2 rounded-full text-center">
       Order
     </a>
+
   </div>
 </header>
 
