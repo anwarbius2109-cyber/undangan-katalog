@@ -12,12 +12,46 @@
 <body class="bg-gray-100">
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 bg-white shadow z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between">
-      <h1 class="font-bold text-lg">Katalog Undangan</h1>
-      <a href="#" class="text-sm bg-black text-white px-4 py-1 rounded">Order</a>
-    </div>
-  </header>
+<header class="sticky top-0 bg-white/80 backdrop-blur shadow z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- LOGO -->
+    <h1 class="font-bold text-lg">Katalog Undangan</h1>
+
+    <!-- MENU DESKTOP -->
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#" class="hover:text-black text-gray-600">Home</a>
+      <a href="#katalog" class="hover:text-black text-gray-600">Katalog</a>
+      <a href="https://wa.me/6281261233730" target="_blank"
+        class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
+        Order
+      </a>
+    </nav>
+
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-2xl font-bold">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" 
+class="hidden md:hidden px-4 pb-4 space-y-3 bg-white shadow-md">
+
+    <a href="#" class="block text-gray-700">Home</a>
+
+    <a href="#katalog" class="block text-gray-700">
+      Katalog
+    </a>
+
+    <a href="https://wa.me/6281261233730" target="_blank"
+      class="block bg-black text-white px-4 py-2 rounded-full text-center">
+      Order
+    </a>
+
+  </div>
+</header>
 
   <!-- HERO -->
   <section class="text-center py-10">
@@ -31,5 +65,21 @@
   </section>
 
   <script src="assets/script.js"></script>
+  <!-- SCRIPT MENU MOBILE -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  if (btn && menu) {
+    btn.addEventListener("click", function () {
+      menu.classList.toggle("hidden");
+
+      btn.innerText = menu.classList.contains("hidden") ? "☰" : "✕";
+    });
+  }
+});
+</script>
+
 </body>
 </html>
