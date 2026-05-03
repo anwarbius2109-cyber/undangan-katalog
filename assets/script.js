@@ -24,10 +24,10 @@ Saya mau pesan undangan
     const linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
 
     katalog.innerHTML += `
-      <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+      <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden text-sm">
 
         <div class="relative group">
-          <img src="${item.gambar}" class="w-full h-80 object-cover">
+          <img src="${item.gambar}" class="w-full aspect-[3/4] sm:aspect-[4/5] object-cover">
 
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-3">
 
@@ -44,7 +44,7 @@ Saya mau pesan undangan
           </div>
         </div>
 
-        <div class="p-4 text-center font-semibold">
+        <div class="p-3 text-center text-sm sm:text-base font-semibold">
           ${item.nama}
         </div>
 
