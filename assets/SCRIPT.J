@@ -96,7 +96,7 @@ fetch("data/porto.json")
 
               <a href="${item.link}" target="_blank"
               class="bg-white px-4 py-2 rounded-full text-sm font-semibold">
-                Lihat Undangan
+                Preview
               </a>
 
             </div>
