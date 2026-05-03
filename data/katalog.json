@@ -1,8 +1,14 @@
 [
   {
-    "nama": "y",
-    "gambar": "assets/Honea.webp",
-    "link": "https://id.sudahnikah.com/d/Honey-Java?kpd=Bapak+Budi",
+    "nama": "White Arabic",
+    "gambar": "assets/White Arabic.png",
+    "link": "https://id.sudahnikah.com/d/White-Arabic?kpd=Tamu+Undangan",
+    "kategori": "khitan"
+  },
+  {
+    "nama": "White Arabic",
+    "gambar": "assets/White Arabic.png",
+    "link": "https://id.sudahnikah.com/d/White-Arabic?kpd=Tamu+Undangan",
     "kategori": "khitan"
   },
   {
