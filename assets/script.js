@@ -89,7 +89,9 @@ function renderPagination(){
   if(halaman < totalHalaman){
     halaman++;
     tampilkan();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById("katalog").scrollIntoView({
+  behavior: "smooth"
+});
   }
 }
 
@@ -97,7 +99,9 @@ function prevPage(){
   if(halaman > 1){
     halaman--;
     tampilkan();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById("katalog").scrollIntoView({
+  behavior: "smooth"
+});
   }
 }
   let container = document.getElementById("pagination");
