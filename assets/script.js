@@ -4,16 +4,21 @@ fetch("data/katalog.json")
   .then(res => res.json())
   .then(data => {
     semuaData = data;
-    tampilkan(data);
+    dataAktif = data;
+    tampilkan();
   });
 
-function tampilkan(data){
+function tampilkan(){
   const katalog = document.getElementById("katalog");
   const nomorWA = "6281261233730";
 
   katalog.innerHTML = "";
 
-  data.forEach(item => {
+  const start = (halaman - 1) * perHalaman;
+  const end = start + perHalaman;
+  const dataTampil = dataAktif.slice(start, end);
+
+  dataTampil.forEach(item => {
 
     const pesan = `Halo kak 👋
 Saya mau pesan undangan
@@ -29,15 +34,15 @@ Saya mau pesan undangan
         <div class="relative group">
           <img src="${item.gambar}" class="w-full aspect-[3/4] sm:aspect-[4/5] object-cover">
 
-          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-3">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-2">
 
             <a href="${item.link}" target="_blank"
-            class="bg-white/90 px-4 py-2 rounded-full text-sm font-semibold">
+            class="bg-white/90 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
               Preview
             </a>
 
             <a href="${linkWA}" target="_blank"
-            class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            class="bg-green-500 text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
               Order
             </a>
 
@@ -51,18 +56,20 @@ Saya mau pesan undangan
       </div>
     `;
   });
+
+  renderPagination();
 }
 
 function filterKategori(kategori){
-  let hasil;
+  halaman = 1;
 
   if(kategori === "all"){
-    hasil = semuaData;
+    dataAktif = semuaData;
   } else {
-    hasil = semuaData.filter(item => item.kategori === kategori);
+    dataAktif = semuaData.filter(item => item.kategori === kategori);
   }
 
-  tampilkan(hasil);
+  tampilkan();
 
   document.querySelectorAll(".btn-filter").forEach(btn => {
     btn.classList.remove("active");
@@ -70,7 +77,6 @@ function filterKategori(kategori){
 
   event.target.classList.add("active");
 }
-
 /* =========================
    🔥 TAMBAH DI BAWAH INI
 ========================= */
