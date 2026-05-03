@@ -84,26 +84,6 @@ function filterKategori(kategori){
    🔥 TAMBAH DI BAWAH INI
 ========================= */
 function renderPagination(){
-  function nextPage(){
-  const totalHalaman = Math.ceil(dataAktif.length / perHalaman);
-  if(halaman < totalHalaman){
-    halaman++;
-    tampilkan();
-    document.getElementById("katalog").scrollIntoView({
-  behavior: "smooth"
-});
-  }
-}
-
-function prevPage(){
-  if(halaman > 1){
-    halaman--;
-    tampilkan();
-    document.getElementById("katalog").scrollIntoView({
-  behavior: "smooth"
-});
-  }
-}
   let container = document.getElementById("pagination");
 
   if(!container){
@@ -137,7 +117,14 @@ function nextPage(){
   if(halaman < totalHalaman){
     halaman++;
     tampilkan();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const el = document.getElementById("katalog");
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+    });
   }
 }
 
@@ -145,7 +132,14 @@ function prevPage(){
   if(halaman > 1){
     halaman--;
     tampilkan();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const el = document.getElementById("katalog");
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+    });
   }
 }
 fetch("data/porto.json")
