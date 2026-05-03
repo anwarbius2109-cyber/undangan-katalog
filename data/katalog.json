@@ -1,5 +1,11 @@
 [
   {
+     "nama": "Honey Wayang",
+    "gambar": "assets/Honey Wayang.png",
+    "link": "https://id.sudahnikah.com/d/Honey-wayang?kpd=Bapak+Budi",
+    "kategori": "wedding"
+  },
+  {
     "nama": "Lentera Taqwa",
     "gambar": "assets/Lentera Taqwa.png",
     "link": "https://id.sudahnikah.com/d/Lentera-Taqwa?kpd=Tamu+Undangan",
