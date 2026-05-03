@@ -68,19 +68,13 @@
   <div id="mobileMenu" 
 class="hidden md:hidden px-4 pb-4 space-y-3 bg-white shadow-md">
 
-    <a href="#" class="block text-gray-700">Home</a>
+    <a href="#" onclick="tutupMenu()" class="block text-gray-700">Home</a>
 
-<a href="#katalog" class="block text-gray-700">
-  Tema
-</a>
+<a href="#katalog" onclick="tutupMenu()" class="block text-gray-700">Tema</a>
 
-<a href="#paket" class="block text-gray-700">
-  Paket
-</a>
-    
-    <a href="#porto" onclick="tutupMenu()" class="block text-gray-700">
-  Portofolio
-</a>
+<a href="#paket" onclick="tutupMenu()" class="block text-gray-700">Paket</a>
+
+<a href="#porto" onclick="tutupMenu()" class="block text-gray-700">Portofolio</a>
 
     <a href="https://wa.me/6281261233730" target="_blank"
       class="block bg-black text-white px-4 py-2 rounded-full text-center">
@@ -350,6 +344,14 @@ class="hidden md:hidden px-4 pb-4 space-y-3 bg-white shadow-md">
   <script src="assets/script.js"></script>
   <!-- SCRIPT MENU MOBILE -->
 <script>
+function tutupMenu() {
+  const menu = document.getElementById("mobileMenu");
+  const btn = document.getElementById("menuBtn");
+
+  if (menu) menu.classList.add("hidden");
+  if (btn) btn.innerText = "☰";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("menuBtn");
   const menu = document.getElementById("mobileMenu");
@@ -357,7 +359,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (btn && menu) {
     btn.addEventListener("click", function () {
       menu.classList.toggle("hidden");
-
       btn.innerText = menu.classList.contains("hidden") ? "☰" : "✕";
     });
   }
