@@ -1,4 +1,7 @@
 let semuaData = [];
+let dataAktif = [];
+let halaman = 1;
+const perHalaman = 10;
 
 fetch("data/katalog.json")
   .then(res => res.json())
@@ -80,7 +83,67 @@ function filterKategori(kategori){
 /* =========================
    🔥 TAMBAH DI BAWAH INI
 ========================= */
+function renderPagination(){
+  function nextPage(){
+  const totalHalaman = Math.ceil(dataAktif.length / perHalaman);
+  if(halaman < totalHalaman){
+    halaman++;
+    tampilkan();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
 
+function prevPage(){
+  if(halaman > 1){
+    halaman--;
+    tampilkan();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+  let container = document.getElementById("pagination");
+
+  if(!container){
+    container = document.createElement("div");
+    container.id = "pagination";
+    container.className = "flex justify-center gap-3 mt-6";
+    document.querySelector("#katalog").after(container);
+  }
+
+  const totalHalaman = Math.ceil(dataAktif.length / perHalaman);
+
+  container.innerHTML = `
+    <button onclick="prevPage()" 
+      class="px-4 py-2 bg-gray-200 rounded ${halaman === 1 ? 'opacity-50 cursor-not-allowed' : ''}">
+      Prev
+    </button>
+
+    <span class="px-4 py-2 text-sm">
+      ${halaman} / ${totalHalaman}
+    </span>
+
+    <button onclick="nextPage()" 
+      class="px-4 py-2 bg-black text-white rounded ${halaman === totalHalaman ? 'opacity-50 cursor-not-allowed' : ''}">
+      Next
+    </button>
+  `;
+}
+
+function nextPage(){
+  const totalHalaman = Math.ceil(dataAktif.length / perHalaman);
+  if(halaman < totalHalaman){
+    halaman++;
+    tampilkan();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function prevPage(){
+  if(halaman > 1){
+    halaman--;
+    tampilkan();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
 fetch("data/porto.json")
   .then(res => res.json())
   .then(data => {
