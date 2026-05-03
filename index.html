@@ -23,9 +23,10 @@
 
 <body class="relative min-h-screen bg-gradient-to-br from-[#FFF8F2] via-[#F7E7CE] to-[#EADBC8] overflow-x-hidden">
 
-  <!-- GLOW -->
-  <div class="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-[#D4AF37]/20 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-[-120px] right-[-120px] w-[400px] h-[400px] bg-pink-200/20 rounded-full blur-3xl"></div>
+<!-- GLOW FIX -->
+<div class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] pointer-events-none"></div>
+
+<div class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] pointer-events-none"></div>
 
   <!-- NAVBAR -->
   <header class="sticky top-0 bg-white/80 backdrop-blur shadow z-50">
