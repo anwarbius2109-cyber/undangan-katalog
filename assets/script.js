@@ -75,8 +75,7 @@ Saya mau pesan undangan
   });
 
   renderPagination();
-}
-
+}, 300);
 function filterKategori(kategori){
   halaman = 1;
 
