@@ -32,10 +32,10 @@ Saya mau pesan undangan
     const linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
 
     katalog.innerHTML += `
-      <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden text-sm">
+      <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300 hover:-translate-y-2 overflow-hidden text-sm group border border-white/40 backdrop-blur">
 
         <div class="relative group">
-          <img src="${item.gambar}" class="w-full aspect-[3/4] sm:aspect-[4/5] object-cover">
+          <img src="${item.gambar}" class="w-full aspect-[3/4] sm:aspect-[4/5] object-cover transition duration-500 group-hover:scale-105">
 
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-2">
 
@@ -154,10 +154,10 @@ fetch("data/porto.json")
 
     data.forEach(item => {
       porto.innerHTML += `
-        <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300 hover:-translate-y-2 overflow-hidden group border border-white/40">
 
           <div class="relative group">
-            <img src="${item.gambar}" class="w-full h-80 object-cover">
+            <img src="${item.gambar}" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
 
             <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
 
