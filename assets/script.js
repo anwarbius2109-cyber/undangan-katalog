@@ -34,7 +34,7 @@ function tampilkan(){
   const start = (halaman - 1) * perHalaman;
   const end = start + perHalaman;
   const dataTampil = dataAktif.slice(start, end);
-
+setTimeout(() => {
   dataTampil.forEach(item => {
 
     const pesan = `Halo kak 👋
