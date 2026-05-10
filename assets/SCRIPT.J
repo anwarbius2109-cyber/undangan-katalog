@@ -96,20 +96,22 @@ function renderPagination(){
   const totalHalaman = Math.ceil(dataAktif.length / perHalaman);
 
   container.innerHTML = `
-    <button onclick="prevPage()" 
-      class="px-4 py-2 bg-gray-200 rounded ${halaman === 1 ? 'opacity-50 cursor-not-allowed' : ''}">
-      Prev
-    </button>
+  <button onclick="prevPage()" 
+    class="px-5 py-2.5 rounded-full border border-white/40 bg-white/70 backdrop-blur shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-1 ${halaman === 1 ? 'opacity-40 cursor-not-allowed' : ''}">
+    
+    ← Prev
+  </button>
 
-    <span class="px-4 py-2 text-sm">
-      ${halaman} / ${totalHalaman}
-    </span>
+  <div class="px-5 py-2.5 rounded-full bg-black text-white text-sm shadow-lg">
+    ${halaman} / ${totalHalaman}
+  </div>
 
-    <button onclick="nextPage()" 
-      class="px-4 py-2 bg-black text-white rounded ${halaman === totalHalaman ? 'opacity-50 cursor-not-allowed' : ''}">
-      Next
-    </button>
-  `;
+  <button onclick="nextPage()" 
+    class="px-5 py-2.5 rounded-full bg-black text-white shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-1 ${halaman === totalHalaman ? 'opacity-40 cursor-not-allowed' : ''}">
+    
+    Next →
+  </button>
+`;
 }
 
 function nextPage(){
