@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
 }
+
 .btn-filter {
   padding: 8px 16px;
   border-radius: 999px;
@@ -17,4 +18,20 @@ body {
 .btn-filter.active {
   background: black;
   color: white;
+}
+
+/* FIX OVERFLOW MOBILE */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
