@@ -15,26 +15,12 @@ function tampilkan(){
   const katalog = document.getElementById("katalog");
   const nomorWA = "6281261233730";
 
-  katalog.innerHTML = `
-  <div class="col-span-2 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-4">
-
-    ${Array(6).fill(`
-      <div class="animate-pulse bg-white rounded-2xl overflow-hidden">
-        <div class="bg-gray-200 h-64"></div>
-
-        <div class="p-4">
-          <div class="h-4 bg-gray-200 rounded w-3/4 mx-auto"></div>
-        </div>
-      </div>
-    `).join("")}
-
-  </div>
-`;
+  katalog.innerHTML = "";
 
   const start = (halaman - 1) * perHalaman;
   const end = start + perHalaman;
   const dataTampil = dataAktif.slice(start, end);
-setTimeout(() => {
+
   dataTampil.forEach(item => {
 
     const pesan = `Halo kak 👋
@@ -75,7 +61,8 @@ Saya mau pesan undangan
   });
 
   renderPagination();
-}, 300);
+}
+
 function filterKategori(kategori){
   halaman = 1;
 
