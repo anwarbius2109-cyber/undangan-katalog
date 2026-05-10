@@ -24,26 +24,27 @@
 <body class="relative min-h-screen bg-gradient-to-br from-[#FFF8F2] via-[#F7E7CE] to-[#EADBC8] overflow-x-hidden">
 
   <!-- GLOW -->
+<div class="fixed inset-0 overflow-hidden -z-10 pointer-events-none">
+
   <div class="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-[#D4AF37]/20 rounded-full blur-3xl"></div>
+
   <div class="absolute bottom-[-120px] right-[-120px] w-[400px] h-[400px] bg-pink-200/20 rounded-full blur-3xl"></div>
 
-  <!-- NAVBAR -->
-  <header class="sticky top-0 bg-white/80 backdrop-blur shadow z-50">
+</div>
 
-  <!-- NAVBAR -->
+ <!-- NAVBAR -->
 <header class="sticky top-0 bg-white/80 backdrop-blur shadow z-50">
+
   <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
 
     <!-- LOGO -->
     <div class="flex items-center gap-2">
+      <img src="assets/MSA H.png" alt="logo" class="w-8 h-8 object-contain">
 
-  <img src="assets/MSA H.png" alt="logo" class="w-8 h-8 object-contain">
-
-  <h1 class="font-bold text-lg">
-    Katalog Undangan Digital
-  </h1>
-
-</div>
+      <h1 class="font-bold text-lg">
+        Katalog Undangan Digital
+      </h1>
+    </div>
 
     <!-- MENU DESKTOP -->
     <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -51,6 +52,7 @@
       <a href="#katalog" class="hover:text-black text-gray-600">Tema</a>
       <a href="#paket" class="hover:text-black text-gray-600">Paket</a>
       <a href="#porto" class="hover:text-black text-gray-600">Porto</a>
+
       <a href="https://wa.me/6281261233730" target="_blank"
         class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
         Order
@@ -65,21 +67,24 @@
   </div>
 
   <!-- MOBILE MENU -->
-  <div id="mobileMenu" 
-class="hidden md:hidden px-4 pb-4 space-y-3 bg-white shadow-md">
+  <div id="mobileMenu"
+    class="hidden md:hidden px-4 pb-4 space-y-3 bg-white shadow-md">
 
     <a href="#" onclick="tutupMenu()" class="block text-gray-700">Home</a>
 
-<a href="#katalog" onclick="tutupMenu()" class="block text-gray-700">Tema</a>
+    <a href="#katalog" onclick="tutupMenu()" class="block text-gray-700">Tema</a>
 
-<a href="#paket" onclick="tutupMenu()" class="block text-gray-700">Paket</a>
+    <a href="#paket" onclick="tutupMenu()" class="block text-gray-700">Paket</a>
 
-<a href="#porto" onclick="tutupMenu()" class="block text-gray-700">Portofolio</a>
+    <a href="#porto" onclick="tutupMenu()" class="block text-gray-700">Portofolio</a>
 
     <a href="https://wa.me/6281261233730" target="_blank"
       class="block bg-black text-white px-4 py-2 rounded-full text-center">
       Order
     </a>
+
+  </div>
+
 </header>
   </div>
 </div>
