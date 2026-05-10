@@ -32,55 +32,96 @@
 
 </div>
 
- <!-- NAVBAR -->
-<header class="sticky top-0 bg-white/80 backdrop-blur shadow z-50">
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur shadow z-50">
 
   <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
 
     <!-- LOGO -->
     <div class="flex items-center gap-2">
-      <img src="assets/MSA H.png" alt="logo" class="w-8 h-8 object-contain">
 
-      <h1 class="font-bold text-lg">
+      <img src="assets/MSA H.png" alt="logo"
+        class="w-8 h-8 object-contain">
+
+      <h1 class="font-bold text-sm md:text-lg">
         Katalog Undangan Digital
       </h1>
+
     </div>
 
     <!-- MENU DESKTOP -->
     <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="#" class="hover:text-black text-gray-600">Home</a>
-      <a href="#katalog" class="hover:text-black text-gray-600">Tema</a>
-      <a href="#paket" class="hover:text-black text-gray-600">Paket</a>
-      <a href="#porto" class="hover:text-black text-gray-600">Porto</a>
 
-      <a href="https://wa.me/6281261233730" target="_blank"
-        class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
-        Order
+      <a href="#" class="hover:text-black text-gray-600">
+        Home
       </a>
+
+      <a href="#katalog" class="hover:text-black text-gray-600">
+        Tema
+      </a>
+
+      <a href="#paket" class="hover:text-black text-gray-600">
+        Paket
+      </a>
+
+      <a href="#porto" class="hover:text-black text-gray-600">
+        Porto
+      </a>
+
+      <a href="https://wa.me/6281261233730"
+        target="_blank"
+        class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
+
+        Order
+
+      </a>
+
     </nav>
 
-    <!-- HAMBURGER -->
-    <button id="menuBtn" class="md:hidden text-2xl font-bold">
+    <!-- BUTTON MOBILE -->
+    <button id="menuBtn"
+      class="md:hidden text-2xl">
+
       ☰
+
     </button>
 
   </div>
 
   <!-- MOBILE MENU -->
   <div id="mobileMenu"
-    class="hidden md:hidden px-4 pb-4 space-y-3 bg-white shadow-md">
+    class="hidden md:hidden bg-white border-t px-4 py-4 space-y-3">
 
-    <a href="#" onclick="tutupMenu()" class="block text-gray-700">Home</a>
+    <a href="#"
+      onclick="tutupMenu()"
+      class="block text-gray-700">
+      Home
+    </a>
 
-    <a href="#katalog" onclick="tutupMenu()" class="block text-gray-700">Tema</a>
+    <a href="#katalog"
+      onclick="tutupMenu()"
+      class="block text-gray-700">
+      Tema
+    </a>
 
-    <a href="#paket" onclick="tutupMenu()" class="block text-gray-700">Paket</a>
+    <a href="#paket"
+      onclick="tutupMenu()"
+      class="block text-gray-700">
+      Paket
+    </a>
 
-    <a href="#porto" onclick="tutupMenu()" class="block text-gray-700">Portofolio</a>
+    <a href="#porto"
+      onclick="tutupMenu()"
+      class="block text-gray-700">
+      Portofolio
+    </a>
 
-    <a href="https://wa.me/6281261233730" target="_blank"
-      class="block bg-black text-white px-4 py-2 rounded-full text-center">
+    <a href="https://wa.me/6281261233730"
+      target="_blank"
+      class="block text-center bg-black text-white py-2 rounded-full">
+
       Order
+
     </a>
 
   </div>
@@ -89,7 +130,7 @@
   </div>
 </div>
 
-<section class="pt-28 md:pt-36">
+<section class="pt-24 md:pt-32">
   <div class="max-w-6xl mx-auto px-4">
 
     <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 max-w-3xl mx-auto leading-snug">
