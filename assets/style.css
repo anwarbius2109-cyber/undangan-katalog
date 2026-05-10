@@ -1,26 +1,63 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1f2937;
 }
 
+/* HEADING PREMIUM */
+h1,
+h2,
+h3,
+.logo-font {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.5px;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* BUTTON & LINK */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+/* FILTER BUTTON */
 .btn-filter {
-  padding: 8px 16px;
+  padding: 10px 18px;
   border-radius: 999px;
-  background: #e5e7eb;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.4);
   font-size: 14px;
-  transition: 0.3s;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn-filter:hover {
   background: black;
   color: white;
+  transform: translateY(-2px);
 }
 
 .btn-filter.active {
   background: black;
   color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* FIX OVERFLOW MOBILE */
+/* CARD HOVER */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+}
+
+/* MOBILE FIX */
 html,
 body {
   overflow-x: hidden;
