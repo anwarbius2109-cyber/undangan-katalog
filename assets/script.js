@@ -154,7 +154,7 @@ fetch("data/porto.json")
 
     data.forEach(item => {
       porto.innerHTML += `
-        <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300 hover:-translate-y-2 overflow-hidden group border border-white/40">
 
           <div class="relative group">
             <img src="${item.gambar}" class="w-full h-80 object-cover">
